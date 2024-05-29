@@ -1,8 +1,8 @@
 //your JS code here. If required.
 document.getElementById("btn").addEventListener('click',function(event){
 	event.preventDefault();
-	var name=document.getElemetbyId('name').value;
-	var age=document.getElemetById('age').value;
+	var name=document.getElementById('name').value;
+	var age=document.getElementById('age').value;
 	myPromise(name,age).then((data)=>{
 		alert(data);
 	}).catch((err)=>{
@@ -18,9 +18,10 @@ function myPromise(name,age){
 				
 			}
 			else{
-				reject(`Oh sorry,${name}. You aren't old enough.`})
+				reject(`Oh sorry,${name}. You aren't old enough.`)
 			}
 		},4000);
 	});
+
 	
 }
