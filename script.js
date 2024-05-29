@@ -1,8 +1,8 @@
 //your JS code here. If required.
 document.getElementById("btn").addEventListener('click',function(event){
 	event.preventDefault();
-	var name=documentGetElemetbyId('name').value;
-	var age=document.GetElemetById('age').value;
+	var name=document.getElemetbyId('name').value;
+	var age=document.getElemetById('age').value;
 	myPromise(name,age).then((data)=>{
 		alert(data);
 	}).catch((err)=>{
@@ -11,7 +11,7 @@ document.getElementById("btn").addEventListener('click',function(event){
 	
 })
 function myPromise(name,age){
-	return new promise((res,rej)=>{
+	return new Promise((resolve,reject)=>{
 		setTimeout(()=>{
 			if(age>18){
 				resolve(`Welcome, ${name}. You can vote.`);
