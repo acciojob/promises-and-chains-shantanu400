@@ -18,7 +18,7 @@ function myPromise(name,age){
 				
 			}
 			else{
-				reject(`Oh sorry,${name}. You aren't old enough.`)
+				reject(`Oh sorry ${name}. You aren't old enough.`)
 			}
 		},4000);
 	});
